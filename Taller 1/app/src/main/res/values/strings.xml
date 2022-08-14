@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Taller 1</string>
+    <string name="app_layouts_info">Taller 1</string>
+
+    <string name="fibonacci_layout_label">FIBONACCI</string>
+    <string name="factorial_layout_label">FACTORIAL</string>
+    <string name="paises_layout_label">PAISES</string>
+
+    <string name="posiciones_layout_label">Posiciones...</string>
+    <string name="number_layout_label">0</string>
+
+    <string name="app_countries_info">Selecciona un pais de la lista para continuar:</string>
+    <string name="relative_layout_answer_label">Estas viendo un ejemplo de relative Layout 🤣</string>
+    <string name="web_view_label">Web View</string>
+    <string name="buscar_label">Buscar</string>
+    <string name="web_view_button_label">Sorpresa !</string>
+</resources>
