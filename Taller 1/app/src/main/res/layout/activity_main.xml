@@ -41,41 +41,46 @@
 
 
             <Button
-                android:id="@+id/boton_linear_layout"
+                android:id="@+id/boton_fibonacci"
                 android:backgroundTint="@color/md_grey_400"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/fibonacci_layout_label" />
 
             <TextView
-                android:id="@+id/text_number"
+                android:id="@+id/text_posiciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="lo que sea"
+                android:text="@string/posiciones_layout_label"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 app:layout_constraintBottom_toTopOf="@+id/boton_relative_layout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/boton_linear_layout" />
 
             <Button
-                android:id="@+id/boton_relative_layout"
+                android:id="@+id/boton_factorial"
                 android:backgroundTint="@color/md_grey_400"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/factorial_layout_label" />
 
-            <TextView
-                android:id="@+id/text_posiciones"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/posiciones_layout_label"
-                app:layout_constraintBottom_toTopOf="@+id/boton_relative_layout"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/boton_linear_layout" />
+            <Spinner
+                android:id="@+id/spinner_number"
+                android:text="@string/number_layout_label"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+
+
+                app:layout_constraintTop_toBottomOf="@+id/boton_linear_layout"
+                />
 
             <Button
-                android:id="@+id/boton_web_view"
+                android:id="@+id/boton_paises"
                 android:backgroundTint="@color/md_grey_400"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
