@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.botonFibonacci.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, FibonacciActivity.class)));
-
-
+        binding.botonFactorial.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, FactorialActivity.class)));
+        binding.botonPaises.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, PaisesActivity.class)));
     }
 }
