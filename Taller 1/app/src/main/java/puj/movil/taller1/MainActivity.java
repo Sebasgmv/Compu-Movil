@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.EditText;
 
 import puj.movil.taller1.data.CountriesFromJson;
 import puj.movil.taller1.databinding.ActivityMainBinding;
@@ -19,8 +20,16 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.botonFibonacci.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, FibonacciActivity.class)));
+        binding.botonFibonacci.setOnClickListener(view -> {
+            Integer valor = Integer.valueOf(binding.getText().toString());
+            Intent intent = new Intent(this, FibonacciActivity.class);
+            intent.putExtra("posiciones", valor);
+            System.out.println("Posicionesss.." + posiciones.getText().toString());
+
+            startActivity(intent);
+        });
         binding.botonFactorial.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, FactorialActivity.class)));
         binding.botonPaises.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, PaisesActivity.class)));
+
     }
 }

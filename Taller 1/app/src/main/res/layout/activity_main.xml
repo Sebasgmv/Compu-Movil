@@ -47,11 +47,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/fibonacci_layout_label" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text_posiciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/posiciones_layout_label"
+                android:hint="@string/posiciones_layout_label"
+                android:inputType="number"
 
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
