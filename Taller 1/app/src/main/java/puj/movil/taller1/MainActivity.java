@@ -21,10 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         binding.botonFibonacci.setOnClickListener(view -> {
-            Integer valor = Integer.valueOf(binding.getText().toString());
+            Integer valor = Integer.valueOf(binding.textPosiciones.getText().toString());
             Intent intent = new Intent(this, FibonacciActivity.class);
             intent.putExtra("posiciones", valor);
-            System.out.println("Posicionesss.." + posiciones.getText().toString());
 
             startActivity(intent);
         });
