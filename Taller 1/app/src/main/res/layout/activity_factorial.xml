@@ -21,7 +21,7 @@
         android:alpha="0.5"
         android:background="@color/md_orange_A700"
         android:gravity="center"
-        android:textColor="@color/md_deep_purple_A400"
+        android:textColor="@color/md_black_1000"
         android:textSize="30sp"
         />
 
