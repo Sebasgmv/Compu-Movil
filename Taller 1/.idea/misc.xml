@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_data_paises.xml" value="0.18333333333333332" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/drawable/ic_fibonacci.xml" value="0.1" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.332" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_data_paises.xml" value="0.5" />
         <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_factorial.xml" value="0.1" />
-        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_fibonacci.xml" value="0.22" />
-        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_main.xml" value="0.4466666666666667" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_fibonacci.xml" value="0.3333333333333333" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/layout/activity_paises.xml" value="0.36904761904761907" />
+        <entry key="..\:/Compu-Movil/Taller 1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/CompuMovil/Talleres/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Universidad/SextoSemestre/CompuMovil/Talleres/Mau/Compu-Movil/Taller 1/app/src/main/res/layout/activity_main.xml" value="0.11503623188405797" />
       </map>
