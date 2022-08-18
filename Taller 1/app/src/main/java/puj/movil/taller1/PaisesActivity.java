@@ -1,6 +1,10 @@
 package puj.movil.taller1;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,5 +38,25 @@ public class PaisesActivity extends AppCompatActivity {
         } catch (JSONException | IOException e) {
             e.printStackTrace();
         }
+
+        Intent intent = new Intent(this, DataPaisesActivity.class);
+
+        binding.listaPaises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Object item = adapterView.getItemAtPosition(i);
+                for (int j = 0; j < countriesFromJson.getCountries().length(); j++) {
+                    try {
+                        if(countriesFromJson.getCountries().getJSONObject(i).get("Name").toString() == item){
+                            intent.putExtra("informacion", (Parcelable) item);
+                            startActivity(intent);
+
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        });
     }
 }
