@@ -38,15 +38,14 @@ public class FibonacciActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFibonacciBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        contador++;
 
-        Integer valor = getIntent().getIntExtra("valor",0);
+        int valor = getIntent().getIntExtra("posiciones",0);
         System.out.println("Valor" + valor);
 
         for (int i = 0; i <= valor; i++) {
             TextView nueva_linea = new TextView(this);
             System.out.print(fibonacci(i)+" ");
-            nueva_linea.setText(String.format(String.valueOf(fibonacci(i))));
+            nueva_linea.setText(String.valueOf(fibonacci(i)));
             nueva_linea.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             binding.exampleLinearLayoutContainer.addView(nueva_linea);
         }

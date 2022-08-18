@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import java.util.logging.Logger;
+
 import puj.movil.taller1.data.CountriesFromJson;
 import puj.movil.taller1.databinding.ActivityMainBinding;
 
@@ -24,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             Integer valor = Integer.valueOf(binding.textPosiciones.getText().toString());
             Intent intent = new Intent(this, FibonacciActivity.class);
             intent.putExtra("posiciones", valor);
+
 
             startActivity(intent);
         });

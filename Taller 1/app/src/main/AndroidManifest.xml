@@ -23,6 +23,9 @@
             android:name=".PaisesActivity"
             android:exported="false" />
         <activity
+            android:name=".DataPaisesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
