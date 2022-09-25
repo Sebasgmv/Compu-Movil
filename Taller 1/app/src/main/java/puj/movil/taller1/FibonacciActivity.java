@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+
 import puj.movil.taller1.databinding.ActivityFibonacciBinding;
 import puj.movil.taller1.databinding.ActivityMainBinding;
 import puj.movil.taller1.utils.AlertUtils;
@@ -53,6 +57,7 @@ public class FibonacciActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFibonacciBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
 
         Integer valor = getIntent().getIntExtra("valor",0);
         System.out.println("Valor" + valor);

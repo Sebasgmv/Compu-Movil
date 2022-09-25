@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/md_green_50"
+    android:background="@color/green_50"
     android:padding="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,7 +20,7 @@
             android:id="@+id/btnCamara"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@color/md_orange_50"
+            android:background="@color/orange_50"
             android:padding="5dp"
             android:scaleType="fitCenter"
             android:src="@drawable/camara"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:adjustViewBounds="true"
-            android:background="@color/md_orange_50"
+            android:background="@color/orange_50"
 
             android:padding="5dp"
             android:scaleType="fitCenter"
@@ -48,7 +48,7 @@
             android:id="@+id/btnLocalizacion"
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:background="@color/md_orange_50"
+            android:background="@color/orange_50"
 
             android:padding="5dp"
             android:scaleType="fitCenter"
