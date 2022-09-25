@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/md_green_50"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnCamara"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/md_orange_50"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camara"
+            app:layout_constraintBottom_toTopOf="@+id/btnContactos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnContactos"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:background="@color/md_orange_50"
+
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contactos"
+            app:layout_constraintBottom_toTopOf="@+id/btnLocalizacion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCamara" />
+
+        <ImageButton
+            android:id="@+id/btnLocalizacion"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/md_orange_50"
+
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/localizacion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnContactos" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
