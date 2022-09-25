@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import puj.movil.myapplication.databinding.ActivityContactsBinding;
 import puj.movil.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
         binding.btnCamara.setOnClickListener(view -> {
             Intent intent = new Intent(this, CameraActivity.class);
+            startActivity(intent);
+        });
+
+        binding.btnContactos.setOnClickListener(view -> {
+            Intent intent = new Intent(this, ContactsActivity.class);
+            startActivity(intent);
+        });
+
+        binding.btnLocalizacion.setOnClickListener(view -> {
+            Intent intent = new Intent(this, LocationActivity.class);
             startActivity(intent);
         });
     }
