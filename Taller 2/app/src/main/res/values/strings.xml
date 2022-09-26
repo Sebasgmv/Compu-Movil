@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Permisos</string>
     <string name="app_layouts_info">Taller 1</string>
+
+    <!--Cámara-->
+    <string name="snackbar_dismiss_label">Cerrar</string>
+    <string name="start_camara">Camara</string>
+    <string name="seleccion_imagen">Seleccionar Imagen</string>
+    <string name="camera_intent">Camara</string>
+    <string name="camerax_intent">CameraX</string>
+    <string name="permission_denied_label">No pude obtener el permiso necesario</string>
+    <string name="capture_saved">Imagen guardada correctamente.</string>
 </resources>
