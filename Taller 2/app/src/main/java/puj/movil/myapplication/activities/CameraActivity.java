@@ -1,4 +1,4 @@
-package puj.movil.myapplication;
+package puj.movil.myapplication.activities;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,8 +23,10 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.ActivityCameraBinding;
 import puj.movil.myapplication.utils.AlertUtils;
+import puj.movil.myapplication.utils.PermissionHelper;
 
 public class CameraActivity extends AppCompatActivity {
     private static String TAG = CameraActivity.class.getName();

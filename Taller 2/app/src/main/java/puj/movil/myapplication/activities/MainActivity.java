@@ -1,11 +1,11 @@
-package puj.movil.myapplication;
+package puj.movil.myapplication.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import puj.movil.myapplication.databinding.ActivityContactsBinding;
+import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
