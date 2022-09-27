@@ -1,8 +1,10 @@
-package puj.movil.myapplication;
+package puj.movil.myapplication.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import puj.movil.myapplication.R;
 
 public class ContactsActivity extends AppCompatActivity {
 
