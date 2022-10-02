@@ -26,7 +26,6 @@ import java.util.Date;
 import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.ActivityCameraBinding;
 import puj.movil.myapplication.utils.AlertUtils;
-import puj.movil.myapplication.utils.PermissionHelper;
 
 public class CameraActivity extends AppCompatActivity {
     private static String TAG = CameraActivity.class.getName();

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Permisos</string>
     <string name="app_layouts_info">Taller 1</string>
+    <string name="snackBar_dismiss_label">Cerrar</string>
 
     <!--Cámara-->
     <string name="snackbar_dismiss_label">Cerrar</string>

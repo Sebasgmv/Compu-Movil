@@ -16,11 +16,9 @@ public class PermissionHelper {
 
     static public final int PERMISSIONS_REQUEST_CAMERA = 1001;
     static public final int PERMISSIONS_REQUEST_READ_CONTACTS = 2002;
-    static public final int PERMISSIONS_LOCATION = 3003;
 
     private boolean mCameraPermissionGranted;
     private boolean mContactsPermissionGranted;
-    private boolean mLocationPermissionGranted;
 
     public void getCameraPermission(Activity activity) {
         if(checkPermission(activity, Manifest.permission.CAMERA)){
@@ -32,12 +30,6 @@ public class PermissionHelper {
         if(checkPermission(activity, Manifest.permission.READ_CONTACTS)){
             mContactsPermissionGranted = true;
         } else ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_CONTACTS}, PERMISSIONS_REQUEST_READ_CONTACTS);
-    }
-
-    public void getLocationPermission(Activity activity){
-        if(checkPermission(activity, Manifest.permission.ACCESS_FINE_LOCATION)){
-            mLocationPermissionGranted = true;
-        } else ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_LOCATION);
     }
 
     private boolean checkPermission(Activity activity, String manifestPermissions) {
