@@ -1,4 +1,4 @@
-package edu.puj.mapas.models;
+package puj.movil.myapplication.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

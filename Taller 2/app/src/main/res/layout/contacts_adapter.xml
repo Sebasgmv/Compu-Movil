@@ -12,7 +12,7 @@
         android:layout_height="150dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/frank_avatar" />
+        android:src="@drawable/localizacion" />
 
     <TextView
         android:id="@+id/contact_full_name"

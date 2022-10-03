@@ -1,4 +1,4 @@
-package edu.puj.mapas.services;
+package puj.movil.myapplication.services;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -11,4 +11,11 @@
     <string name="camerax_intent">CameraX</string>
     <string name="permission_denied_label">No pude obtener el permiso necesario</string>
     <string name="capture_saved">Imagen guardada correctamente.</string>
+
+    <!--Mapas-->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="fix_position_label">Mover el mapa con la posición del usuario?</string>
+    <string name="direction_field_label">Dirección</string>
+    <string name="search_button_label">Buscar</string>
+
 </resources>

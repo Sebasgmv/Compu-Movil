@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import puj.movil.myapplication.R;
+
 public class MapsActivity extends AppCompatActivity {
 
     @Override

@@ -1,4 +1,4 @@
-package edu.puj.mapas.dependencies.modules;
+package puj.movil.myapplication.dependencies.modules;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import edu.puj.mapas.services.GeoInfoFromJsonService;
 import lombok.AllArgsConstructor;
+import puj.movil.myapplication.services.GeoInfoFromJsonService;
 
 @Module
 @AllArgsConstructor

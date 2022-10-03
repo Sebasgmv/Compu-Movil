@@ -1,4 +1,4 @@
-package edu.puj.mapas.services;
+package puj.movil.myapplication.services;
 
 import android.content.Context;
 import android.location.Address;
@@ -9,8 +9,8 @@ import com.google.android.gms.maps.model.LatLng;
 import java.io.IOException;
 import java.util.List;
 
-import edu.puj.mapas.utils.DistanceUtils;
 import lombok.Getter;
+import puj.movil.myapplication.utils.DistanceUtils;
 
 @Getter
 public class GeocoderService {

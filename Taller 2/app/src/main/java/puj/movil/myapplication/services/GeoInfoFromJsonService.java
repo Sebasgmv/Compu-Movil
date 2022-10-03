@@ -1,4 +1,4 @@
-package edu.puj.mapas.services;
+package puj.movil.myapplication.services;
 
 import android.content.Context;
 import android.util.Log;
@@ -12,8 +12,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.puj.mapas.models.GeoInfo;
 import lombok.Getter;
+import puj.movil.myapplication.models.GeoInfo;
 
 @Getter
 public class GeoInfoFromJsonService {
