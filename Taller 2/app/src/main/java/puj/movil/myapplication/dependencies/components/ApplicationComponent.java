@@ -19,4 +19,5 @@ import puj.movil.myapplication.dependencies.modules.PermissionModule;
 public interface ApplicationComponent {
     void inject(BasicActivity activity);
     void inject(ContactsActivity activity);
+    void inject(FragmentMap fragmentMap);
 }

@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import puj.movil.myapplication.App;
+import puj.movil.myapplication.services.LocationService;
 import puj.movil.myapplication.utils.AlertsHelper;
 import puj.movil.myapplication.utils.PermissionHelper;
 
@@ -17,6 +18,9 @@ public class BasicActivity extends AppCompatActivity {
 
     @Inject
     PermissionHelper permissionHelper;
+
+    @Inject
+    LocationService locationService;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
