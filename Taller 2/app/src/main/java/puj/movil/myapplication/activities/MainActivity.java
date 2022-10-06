@@ -8,7 +8,8 @@ import android.os.Bundle;
 import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+//De quién debería extender AppCompatActivity o Basic Activity?
+public class MainActivity extends BasicActivity {
     private ActivityMainBinding binding;
 
     @Override
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.btnLocalizacion.setOnClickListener(view -> {
-            Intent intent = new Intent(this, LocationActivity.class);
+            Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);
         });
     }

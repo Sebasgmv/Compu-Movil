@@ -46,7 +46,7 @@ import javax.inject.Inject;
 
 import puj.movil.myapplication.App;
 import puj.movil.myapplication.R;
-import puj.movil.myapplication.databinding.ActivityFragmentMapBinding;
+import puj.movil.myapplication.databinding.FragmentMapBinding;
 import puj.movil.myapplication.services.GeoInfoFromJsonService;
 import puj.movil.myapplication.services.GeocoderService;
 import puj.movil.myapplication.utils.BitmapUtils;
@@ -58,7 +58,7 @@ public class FragmentMap extends Fragment {
     @Inject
     GeocoderService geocoderService;
 
-    ActivityFragmentMapBinding binding; //------------
+    FragmentMapBinding binding; //------------
 
     //Map interaction variables
     GoogleMap googleMap;
@@ -109,7 +109,7 @@ public class FragmentMap extends Fragment {
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         ((App) requireActivity().getApplicationContext()).getAppComponent().inject(this);
-        binding = ActivityFragmentMapBinding.inflate(inflater); //---------------
+        binding = FragmentMapBinding.inflate(inflater); //---------------
         return binding.getRoot();
     }
 

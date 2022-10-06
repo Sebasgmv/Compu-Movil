@@ -27,7 +27,7 @@ import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.ActivityCameraBinding;
 import puj.movil.myapplication.utils.AlertUtils;
 
-public class CameraActivity extends AppCompatActivity {
+public class CameraActivity extends BasicActivity {
     private static String TAG = CameraActivity.class.getName();
     private ActivityCameraBinding binding;
 

@@ -19,7 +19,7 @@ import puj.movil.myapplication.adapters.ContactsAdapter;
 import puj.movil.myapplication.databinding.ActivityContactsBinding;
 import puj.movil.myapplication.utils.PermissionHelper;
 
-public class ContactsActivity extends AppCompatActivity {
+public class ContactsActivity extends BasicActivity {
     ActivityContactsBinding binding;
 
     @Inject
