@@ -102,9 +102,7 @@ public class FragmentMap extends Fragment {
             googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
                 @Override
                 public void onMapLongClick(@NonNull LatLng latLng) {
-                    MarkerOptions newMarker = new MarkerOptions();
-                    newMarker.position(latLng);
-                    googleMap.addMarker(newMarker);
+                    findPlaceByLocation(latLng);
                 }
             });
             //Setup the route line
@@ -227,6 +225,30 @@ public class FragmentMap extends Fragment {
                     String mensaje;
                     mensaje = String.format("La distancia que hay entre su posición\n" +
                                                 "actual y el marcador creado es de %s :", dist);
+                    AlertUtils.longToast(getContext(), mensaje);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void findPlaceByLocation(LatLng latLng){
+        try {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                List<Address> results = geocoderService.findPlacesByPosition(latLng);
+                Log.d("TAG", "findPlaces: results = " + results.size());
+                results.forEach(address -> googleMap.addMarker(new MarkerOptions()
+                        .position(new LatLng(address.getLatitude(), address.getLongitude()))
+                        .title(address.getFeatureName())
+                        .snippet(address.getAddressLine(0) != null ? address.getAddressLine(0) : "")));
+                if (results.size() > 0) {
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLng( new LatLng(results.get(0).getLatitude(), results.get(0).getLongitude())));
+                    int dist = DistanceUtils.calculateDistanceInKilometer(userPosition.getPosition().latitude, userPosition.getPosition().longitude,
+                            results.get(0).getLatitude(), results.get(0).getLongitude());
+                    String mensaje;
+                    mensaje = String.format("La distancia que hay entre su posición\n" +
+                            "actual y el marcador creado es de %s :", dist);
                     AlertUtils.longToast(getContext(), mensaje);
                 }
             }

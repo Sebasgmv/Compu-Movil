@@ -35,4 +35,8 @@ public class GeocoderService {
         LatLng bottomRightPosition = DistanceUtils.moveLatLngInKilometer(DISTANCE_RADIUS_KM, DISTANCE_RADIUS_KM, centerPosition);
         return geocoder.getFromLocationName(name, MAX_RESULTS, upperLeftPosition.latitude, upperLeftPosition.longitude, bottomRightPosition.latitude, bottomRightPosition.longitude);
     }
+
+    public List<Address> findPlacesByPosition(LatLng centerPosition) throws IOException {
+       return geocoder.getFromLocation(centerPosition.latitude, centerPosition.longitude, 1);
+    }
 }
