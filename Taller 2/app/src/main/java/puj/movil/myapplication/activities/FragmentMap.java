@@ -75,6 +75,7 @@ public class FragmentMap extends Fragment {
     SensorManager sensorManager;
     Sensor lightSensor;
     SensorEventListener lightSensorEventListener;
+    GoogleMap.OnMapLongClickListener longClickListener;
 
     private final OnMapReadyCallback callback = new OnMapReadyCallback() {
         @Override
@@ -95,6 +96,17 @@ public class FragmentMap extends Fragment {
                     .anchor(0.5f, 0.5f)
                     .zIndex(1.0f));
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(UNIVERSIDAD_JAVERIANA));
+
+
+
+            googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+                @Override
+                public void onMapLongClick(@NonNull LatLng latLng) {
+                    MarkerOptions newMarker = new MarkerOptions();
+                    newMarker.position(latLng);
+                    googleMap.addMarker(newMarker);
+                }
+            });
             //Setup the route line
             userRoute = googleMap.addPolyline(new PolylineOptions()
                     .color(R.color.md_light_blue_400)
@@ -222,4 +234,6 @@ public class FragmentMap extends Fragment {
             e.printStackTrace();
         }
     }
+
+
 }
