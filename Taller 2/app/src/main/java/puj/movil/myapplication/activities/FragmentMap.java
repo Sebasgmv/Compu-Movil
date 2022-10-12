@@ -63,7 +63,7 @@ public class FragmentMap extends Fragment {
     //Map interaction variables
     GoogleMap googleMap;
     static final int INITIAL_ZOOM_LEVEL = 18;
-    private final LatLng CENTRAL_PARK = new LatLng(40.7812, -73.9665);
+    private final LatLng UNIVERSIDAD_JAVERIANA = new LatLng(4.6285, -74.0646);
     Marker userPosition;
     Polyline userRoute;
 
@@ -87,17 +87,17 @@ public class FragmentMap extends Fragment {
             googleMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(getContext(), R.raw.map_day_style));
             //Setup the user marker with a default position
             userPosition = googleMap.addMarker(new MarkerOptions()
-                    .position(CENTRAL_PARK)
+                    .position(UNIVERSIDAD_JAVERIANA)
                     .icon(BitmapUtils.getBitmapDescriptor(getContext(), R.drawable.ic_baseline_circle_24))
                     .anchor(0.5f, 0.5f)
                     .zIndex(1.0f));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(CENTRAL_PARK));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLng(UNIVERSIDAD_JAVERIANA));
             //Setup the route line
             userRoute = googleMap.addPolyline(new PolylineOptions()
                     .color(R.color.md_light_blue_400)
                     .width(15.0f)
                     .geodesic(true)
-                    .zIndex(0.5f));
+                    .zIndex(0.5f)); 
             //Setup the rest of the markers based in a json file
             loadGeoInfo();
         }
@@ -199,7 +199,6 @@ public class FragmentMap extends Fragment {
     public void findPlaces(String search) {
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-
                 List<Address> results = geocoderService.finPlacesByNameInRadious(search, userPosition.getPosition());
                 Log.d("TAG", "findPlaces: results = " + results.size());
                 results.forEach(address -> googleMap.addMarker(new MarkerOptions()
