@@ -17,7 +17,7 @@ public class GeocoderService {
     private static final String TAG = GeocoderService.class.getName();
 
     private static final int MAX_RESULTS = 20;
-    private static final double DISTANCE_RADIUS_KM = 5.0d;
+    private static final double DISTANCE_RADIUS_KM = 40.0d;
     private final Context context;
     private final Geocoder geocoder;
 

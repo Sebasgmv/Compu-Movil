@@ -5,7 +5,7 @@ import com.google.android.gms.maps.model.LatLng;
 public class DistanceUtils {
     private final static double AVERAGE_RADIUS_OF_EARTH_KM = 6371;
 
-    private static int calculateDistanceInKilometer(double userLat, double userLng, double venueLat, double venueLng) {
+    public static int calculateDistanceInKilometer(double userLat, double userLng, double venueLat, double venueLng) {
 
         double latDistance = Math.toRadians(userLat - venueLat);
         double lngDistance = Math.toRadians(userLng - venueLng);

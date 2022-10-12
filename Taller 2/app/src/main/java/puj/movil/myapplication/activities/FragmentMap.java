@@ -23,6 +23,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Toast;
 
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -49,7 +50,9 @@ import puj.movil.myapplication.R;
 import puj.movil.myapplication.databinding.FragmentMapBinding;
 import puj.movil.myapplication.services.GeoInfoFromJsonService;
 import puj.movil.myapplication.services.GeocoderService;
+import puj.movil.myapplication.utils.AlertUtils;
 import puj.movil.myapplication.utils.BitmapUtils;
+import puj.movil.myapplication.utils.DistanceUtils;
 
 public class FragmentMap extends Fragment {
     @Inject
@@ -205,6 +208,15 @@ public class FragmentMap extends Fragment {
                         .position(new LatLng(address.getLatitude(), address.getLongitude()))
                         .title(address.getFeatureName())
                         .snippet(address.getAddressLine(0) != null ? address.getAddressLine(0) : "")));
+                if (results.size() > 0) {
+                    googleMap.animateCamera(CameraUpdateFactory.newLatLng( new LatLng(results.get(0).getLatitude(), results.get(0).getLongitude())));
+                    int dist = DistanceUtils.calculateDistanceInKilometer(userPosition.getPosition().latitude, userPosition.getPosition().longitude,
+                                                                results.get(0).getLatitude(), results.get(0).getLongitude());
+                    String mensaje;
+                    mensaje = String.format("La distancia que hay entre su posición\n" +
+                                                "actual y el marcador creado es de %s :", dist);
+                    AlertUtils.longToast(getContext(), mensaje);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
