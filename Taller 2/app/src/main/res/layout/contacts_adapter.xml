@@ -8,11 +8,21 @@
 
     <ImageView
         android:id="@+id/contact_photo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="77dp"
+        android:layout_height="68dp"
+        android:src="@drawable/frank_avatar"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contact_number"
+        android:layout_width="27dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/contact_photo"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/frank_avatar" />
+        tools:text="#" />
 
     <TextView
         android:id="@+id/contact_full_name"
@@ -20,29 +30,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/contact_favorite"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/contact_photo"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/contact_number"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/full_names" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/contact_favorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/contact_full_name"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/contact_phone"
-        android:layout_width="0dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/contact_photo"
-        app:layout_constraintTop_toBottomOf="@+id/contact_full_name"
-        tools:text="@tools:sample/us_phones"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

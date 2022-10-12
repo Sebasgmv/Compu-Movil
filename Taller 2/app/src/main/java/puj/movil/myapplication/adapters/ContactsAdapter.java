@@ -18,6 +18,8 @@ import puj.movil.myapplication.databinding.ContactsAdapterBinding;
 
 public class ContactsAdapter extends CursorAdapter {
 
+    private int numContact=1;
+
     public static final String[] PROYECTION = new String[]{
             ContactsContract.Profile._ID,
             ContactsContract.Contacts.PHOTO_URI,
@@ -41,7 +43,7 @@ public class ContactsAdapter extends CursorAdapter {
 
         if(cursor.getString(1) != null) binding.contactPhoto.setImageURI(Uri.parse(cursor.getString(1)));
         binding.contactFullName.setText(cursor.getString(2));
-        binding.contactPhone.setText(String.valueOf(cursor.getInt(3)));
-        binding.contactFavorite.setChecked(cursor.getInt(4) == 1);
+        binding.contactNumber.setText(String.valueOf(numContact));
+        numContact++;
     }
 }
