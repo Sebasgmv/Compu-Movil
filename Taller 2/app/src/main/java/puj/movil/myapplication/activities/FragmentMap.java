@@ -71,7 +71,7 @@ public class FragmentMap extends Fragment {
     Polyline userRoute;
 
     //Light sensor variables
-    final static float LIGHT_LIMIT = 1500.0f;
+    final static float LIGHT_LIMIT = 2000.0f;
     SensorManager sensorManager;
     Sensor lightSensor;
     SensorEventListener lightSensorEventListener;
@@ -97,8 +97,14 @@ public class FragmentMap extends Fragment {
                     .zIndex(1.0f));
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(UNIVERSIDAD_JAVERIANA));
 
-            googleMap.setOnMapLongClickListener(latLng -> findPlaceByLocation(latLng));
 
+
+            googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
+                @Override
+                public void onMapLongClick(@NonNull LatLng latLng) {
+                    findPlaceByLocation(latLng);
+                }
+            });
             //Setup the route line
             userRoute = googleMap.addPolyline(new PolylineOptions()
                     .color(R.color.md_light_blue_400)
@@ -218,7 +224,7 @@ public class FragmentMap extends Fragment {
                                                                 results.get(0).getLatitude(), results.get(0).getLongitude());
                     String mensaje;
                     mensaje = String.format("La distancia que hay entre su posición\n" +
-                                                "actual y el marcador creado es de %s :", dist);
+                                                "actual y el marcador creado es de: %skm", dist);
                     AlertUtils.longToast(getContext(), mensaje);
                 }
             }
@@ -242,7 +248,7 @@ public class FragmentMap extends Fragment {
                             results.get(0).getLatitude(), results.get(0).getLongitude());
                     String mensaje;
                     mensaje = String.format("La distancia que hay entre su posición\n" +
-                            "actual y el marcador creado es de %s :", dist);
+                            "actual y el marcador creado es de: %skm", dist);
                     AlertUtils.longToast(getContext(), mensaje);
                 }
             }
