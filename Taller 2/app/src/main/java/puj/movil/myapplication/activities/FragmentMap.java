@@ -71,7 +71,7 @@ public class FragmentMap extends Fragment {
     Polyline userRoute;
 
     //Light sensor variables
-    final static float LIGHT_LIMIT = 2000.0f;
+    final static float LIGHT_LIMIT = 1500.0f;
     SensorManager sensorManager;
     Sensor lightSensor;
     SensorEventListener lightSensorEventListener;
@@ -97,14 +97,8 @@ public class FragmentMap extends Fragment {
                     .zIndex(1.0f));
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(UNIVERSIDAD_JAVERIANA));
 
+            googleMap.setOnMapLongClickListener(latLng -> findPlaceByLocation(latLng));
 
-
-            googleMap.setOnMapLongClickListener(new GoogleMap.OnMapLongClickListener() {
-                @Override
-                public void onMapLongClick(@NonNull LatLng latLng) {
-                    findPlaceByLocation(latLng);
-                }
-            });
             //Setup the route line
             userRoute = googleMap.addPolyline(new PolylineOptions()
                     .color(R.color.md_light_blue_400)
